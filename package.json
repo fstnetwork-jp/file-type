@@ -1,6 +1,6 @@
 {
 	"name": "file-type",
-	"version": "18.0.0",
+	"version": "18.0.1",
 	"description": "Detect the file type of a Buffer/Uint8Array/ArrayBuffer",
 	"license": "MIT",
 	"repository": "sindresorhus/file-type",
@@ -10,6 +10,7 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
+	"main": "./index.cjs",
 	"type": "module",
 	"exports": {
 		".": {
@@ -22,7 +23,8 @@
 		"node": ">=14.16"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd"
+		"test": "xo && ava && tsd",
+		"build-cjs": "esbuild ./index.js --bundle --platform=node --target=node16 --outfile=./index.cjs"
 	},
 	"files": [
 		"index.js",
@@ -196,6 +198,7 @@
 		"vcf"
 	],
 	"dependencies": {
+		"esbuild": "^0.15.13",
 		"readable-web-to-node-stream": "^3.0.2",
 		"strtok3": "^7.0.0",
 		"token-types": "^5.0.1"
