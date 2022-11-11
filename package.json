@@ -34,7 +34,8 @@
 		"core.js",
 		"core.d.ts",
 		"supported.js",
-		"util.js"
+		"util.js",
+		"index.cjs"
 	],
 	"keywords": [
 		"mime",
